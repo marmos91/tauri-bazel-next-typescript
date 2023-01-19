@@ -2,11 +2,6 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev -p 1420",
-    "build": "next build && next export -o dist",
-    "tauri": "tauri"
-  },
   "dependencies": {
     "@next/font": "13.1.2",
     "@tauri-apps/api": "^1.2.0",
