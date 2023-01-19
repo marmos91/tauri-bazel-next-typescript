@@ -1,31 +1,42 @@
 load("@npm//next:index.bzl", "next")
-
-exports_files([
-    "tsconfig.json",
-])
+load("@npm//@tauri-apps/cli:index.bzl", "tauri")
 
 next(
-    name = "build",
+    name = "next-build",
     data = glob([
         "pages/**",
         "public/**",
         "styles/**",
     ]) + [
-        "package.json",
-        "package-lock.json",
         "tsconfig.json",
-        "next-env.d.ts",
-        "next.config.js",
-    ] + [
-        "@npm//@next/font",
-        "@npm//@types/node",
-        "@npm//@types/react",
-        "@npm//@types/react-dom",
-        "@npm//eslint",
-        "@npm//eslint-config-next",
-        "@npm//react",
-        "@npm//react-dom",
-        "@npm//typescript",
     ],
     templated_args = ["build"],
+)
+
+next(
+    name = "next-dev",
+    data = glob([
+        "pages/**",
+        "public/**",
+        "styles/**",
+    ]) + [
+        "tsconfig.json",
+    ],
+    templated_args = ["dev"],
+)
+
+tauri(
+    name = "dev",
+    data = glob(["**"]),
+    templated_args = [
+        "dev",
+    ],
+)
+
+tauri(
+    name = "bundle",
+    data = glob(["**"]),
+    templated_args = [
+        "build",
+    ],
 )

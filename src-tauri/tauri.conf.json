@@ -1,9 +1,9 @@
 {
   "build": {
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "node_modules/next/dist/bin/next dev -p 1420",
+    "beforeBuildCommand": "node_modules/next/dist/bin/next build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist",
+    "distDir": "../.next",
     "withGlobalTauri": false
   },
   "package": {
@@ -33,7 +33,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.my-app.app",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
