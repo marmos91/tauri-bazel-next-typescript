@@ -2,6 +2,15 @@
 
 A small repository to demonstrate how to build a [Tauri](https://tauri.app/) project that is using [NextJS](https://nextjs.org/) + Typescript as a frontend framework with [Bazel](https://bazel.build/).
 
+## Before running it
+
+This project is using `git LFS`. After cloning it, remember to run the following commands
+
+```bash
+git lfs install
+git lfs pull
+```
+
 ## How to use
 
 To run Tauri in development mode just run
