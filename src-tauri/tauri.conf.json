@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeDevCommand": "node_modules/next/dist/bin/next dev -p 1420",
-    "beforeBuildCommand": "node_modules/next/dist/bin/next build",
+    "beforeDevCommand": "node node_modules/next/dist/bin/next dev -p 1420",
+    "beforeBuildCommand": "node node_modules/next/dist/bin/next build",
     "devPath": "http://localhost:1420",
     "distDir": "../.next",
     "withGlobalTauri": false

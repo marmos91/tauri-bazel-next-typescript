@@ -27,7 +27,9 @@ next(
 
 tauri(
     name = "dev",
-    data = glob(["**"]),
+    data = glob(["**"]) + [
+        "@npm//next",
+    ],
     templated_args = [
         "dev",
     ],
@@ -35,7 +37,9 @@ tauri(
 
 tauri(
     name = "bundle",
-    data = glob(["**"]),
+    data = glob(["**"]) + [
+        "@npm//next",
+    ],
     templated_args = [
         "build",
     ],
