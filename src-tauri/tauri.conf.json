@@ -1,9 +1,9 @@
 {
   "build": {
     "beforeDevCommand": "node node_modules/next/dist/bin/next dev -p 1420",
-    "beforeBuildCommand": "node node_modules/next/dist/bin/next build",
+    "beforeBuildCommand": "node node_modules/next/dist/bin/next build && node node_modules/next/dist/bin/next export -o next-dist",
     "devPath": "http://localhost:1420",
-    "distDir": "../.next",
+    "distDir": "../next-dist",
     "withGlobalTauri": false
   },
   "package": {
